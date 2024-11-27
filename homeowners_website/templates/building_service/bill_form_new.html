@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block content %}
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+<div class="card m-1">
+    <div class="card-header">
+        Квитанция на оплату за {{ date }}
+    </div>
+    <div class="card-body" style="overflow-x: auto;">
+        <p>Адрес:
+        <b>{{ address }}</b></p>
+        <table class="table table-striped" style="font-size: 0.8em;">  <!-- Bootstrap classes for styling -->
+            <thead>
+              <tr>
+                <th></th>
+                <th>Тариф</th>
+                <th>Новое показание</th>
+                <th>Предыдущее показание</th>
+                <th>Норматив</th>
+                <th>Площадь</th>
+                <th>Кол-во проживающих</th>
+                <th>Объем потребленных услуг</th>
+                <th>Сумма (₽)</th>
+                {% comment %} <th>Площадь</th>
+                <th>ХВС (₽/м³)</th>
+                <th>ГВС (₽/м³)</th>
+                <th>Электроснабжение (₽/кВт ч)</th>
+                <th>Отопление</th>
+                <th>Водоотведение</th>
+                <th>Взнос на капремонт</th>
+                <th>Сод. жилья</th>
+                <th>Обращение с ТКО</th> {% endcomment %}
+              </tr>
+            </thead>
+            <tbody>
+                
+                
+                    {% for key, item in payment_results.items %}
+                    <tr>
+                    <td><b>
+                        {{ key }}
+                    </b>
+                    </td>
+                    <td>
+                        {% if item.tariff %}
+                        {{ item.tariff }} {{ item.units }}
+                        {% else %}
+                        -
+                        {% endif %}
+                        
+                    </td>
+                    <td>
+                        {% if item.new_reading %}
+                        {{ item.new_reading }}
+                        {% else %}
+                        -
+                        {% endif %}
+                        
+                    </td>
+                    <td>
+                        {% if item.previous_reading %}
+                        {{ item.previous_reading }}
+                        {% else %}
+                        -
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if item.norm %}
+                        {{ item.norm }}
+                        {% else %}
+                        -
+                        {% endif %}
+                    </td>
+                    <td>
+                        {{ item.area }}
+                    </td>
+                    <td>
+                        {{ item.number_of_people }}
+                    </td>
+                    <td>
+                        {% if item.difference %}
+                        {{ item.difference|floatformat:2 }}
+                        {% else %}
+                        -
+                        {% endif %}
+                    </td>
+                    <td>
+                        {{ item.result|floatformat:2 }}
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td><b>Итого</b></td><td>{{ total_sum }} руб.</td>
+                </tr>
+            </tbody>
+
+          </table>
+          <p>Вы можете оплатить услуги в любом удобном банке, указав реквизиты ТСЖ и сумму.</p>
+
+    </div>
+</div> 
+{% endblock %}   

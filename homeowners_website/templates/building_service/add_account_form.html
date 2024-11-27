@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block content %}
+{% if message %}
+    <b>{{ message }}</b>
+    {% endif %}
+  <div class="card">
+    
+    <div class="card-header">
+      Добавить лицевой счет
+    </div>
+    
+    <div class="card-body">
+  <form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="Отправить" %}
+  </form>
+
+  
+</div>
+</div>
+</div>  
+{% endblock %}   

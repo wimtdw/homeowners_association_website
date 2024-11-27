@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class="alert alert-primary my-0 py-2">
+  Срок оплаты ЖКУ за текущий месяц - до 10 числа следующего месяца. <br>
+  Дней до 10 {{ month_text }}: {{ diff }}
+  </div>
+<div class=" my-1">
+      
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            Пользователь: <b>{{ user.username }}</b> <br>
+            
+          Email: <b>{{ user.email }}</b>
+          
+            
+        </li>
+          <li class="list-group-item"><b>Лицевые счета:</b></li>
+        {% if user.accounts.all %}
+          {% for account in accounts %}
+            <li class="list-group-item">{{ account }}
+              
+                <div class="d-flex flex-wrap">
+              <a href="{% url 'building_service:add_readings' account.account_number %}" class="my-2 mx-2 btn btn-primary btn-sm">Подать показания счётчиков</a>
+              <a href="{% url 'building_service:get_bill' account.account_number %}" class="my-2 mx-2 btn btn-primary btn-sm">Получить квитанцию</a>
+              <a href="{% url 'building_service:readings_history' account.account_number %}" class="my-2 mx-2 btn btn-primary btn-sm">История показаний</a>
+            </div>
+              
+            </li>
+          {% endfor %}
+        {% else %}
+        <li class="list-group-item">Лицевые счета не привязаны.</li>
+        {% endif %}
+        
+        <li class="list-group-item"><a href="{% url 'building_service:add_account' %}" class="my-2 ">Добавить лицевой счёт</a></li>
+        </ul>
+{% endif %}
+
+{% endblock %}

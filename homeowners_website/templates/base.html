@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image">
+    <title>
+      {% block title %}{% endblock %}
+    </title>
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    <style>
+      .table-striped {
+        border-collapse: collapse; /* Сливает границы ячеек */
+      }
+      
+      .table-striped th,
+      .table-striped td {
+        border: 1px solid #808080; /* Добавляет границы толщиной 1 пиксель, серого цвета */
+      }
+    </style>      
+  </head>
+  <body>
+    {% include "includes/header.html" %}
+    <main>
+      <div class="container py-5">
+      {% block content %}{% endblock %}
+      </div>
+    </main>
+    {% include "includes/footer.html" %}   
+  </body>
+</html>

@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block content %}
+<div class="card col-10 m-1">
+    <div class="card-header">
+        История показаний
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ account }}</li>
+            <li class="list-group-item"><form >
+    
+                {% bootstrap_form form  %}
+                {% bootstrap_button button_type="submit" content="Показать" %}
+                
+                </form>
+            
+            
+{% if result_dict %}
+    <table class="table table-striped my-3" >  <!-- Bootstrap classes for styling -->
+        <thead>
+          <tr>
+            <th></th>
+            <th>Номер счётчика</th>
+            <th>Объем услуг</th>
+            <th>Текущее показание</th>
+            <th>Предыдущее показание</th>
+            <th>Единицы измерения</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+                {% for key, item in result_dict.items %}
+                <tr>
+                <td><b>
+                    {{ key }}
+                </b>
+                </td>
+                <td>
+                    {% if item %}
+                    {{ item.number }}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+                <td>
+                    {% if item %}
+                    {{ item.difference }}
+                    {% else %}
+                    -
+                    {% endif %}
+                    
+                </td>
+                <td>
+                    {% if item %}
+                    {{ item.reading_cur }}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+                <td>
+                    {% if item and item.reading_prev %}
+                    {{ item.reading_prev }}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+                <td>
+                    {% if item %}
+                    {{ item.units }}
+                    {% else %}
+                    -
+                    {% endif %}
+                </td>
+                
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+
+      </table>
+{% elif request.GET %}
+<p class="my-3">Записей за этот период не найдено.</p>
+{% endif%}
+    </li>
+</ul>
+        
+{% endblock %}   

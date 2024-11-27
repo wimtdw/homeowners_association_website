@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <b><li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li></b>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+<div class="card col-7 m-1">
+    <div class="card-header">
+        Подать показания счётчиков
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <p>Пожалуйста, проверьте, что адрес правильный:
+            <b>{{ address }}</b></p>
+            {% csrf_token %}
+            {% comment %} <span>Выберите период </span>
+                {{ form.period }} <br> <br> {% endcomment %}
+            <p>Введите данные счётчиков</p>
+            
+            <ul >
+                
+                <li><b>ХВС</b><br>
+                    Счётчик № {{ meter_data.ХВС.individual_number }} <br>
+                    Предыдущее показание: {{ meter_data.ХВС.last_reading }} <br>
+                    Текущее показание:
+                    {{ form.cold_water_reading }}   
+                    {% comment %} {{ meter_data.ХВС.id }} {% endcomment %}
+                </li> 
+                <li><b>ГВС</b><br>
+                    Счётчик № {{ meter_data.ГВС.individual_number }} <br>
+                    Предыдущее показание: {{ meter_data.ГВС.last_reading }} <br>
+                    Текущее показание:
+                    {{ form.hot_water_reading }}   
+                </li> 
+                <li><b>Электроснабжение</b><br>
+                    Счётчик № {{ meter_data.Электроснабжение.individual_number }} <br>
+                    Предыдущее показание: {{ meter_data.Электроснабжение.last_reading }} <br>
+                    Текущее показание:
+                    {{ form.electricity_reading }}   
+                </li> 
+            </ul> 
+               
+            {% bootstrap_button button_type="submit" content="Отправить показания" %}
+        </form>
+    </div>
+</div> 
+{% endblock %}   

@@ -7,15 +7,15 @@ class PersonalAccount(models.Model):
     max_length=8,
     unique=True,
     validators=[
-      RegexValidator(r'^\d{8}$', 'Номер лицевого счета должен состоять из 8 цифр.'),
-      MinLengthValidator(8),
-      MaxLengthValidator(8)
+      RegexValidator(r'^\d{6}$', 'Номер лицевого счета должен состоять из 8 цифр.'),
+      MinLengthValidator(6),
+      MaxLengthValidator(6)
     ],
     verbose_name='Номер лицевого счета'
   )
   building = models.CharField(max_length=3, verbose_name='Корпус дома')
   apartment_number = models.CharField(max_length=5, verbose_name='Номер квартиры')
-  apartment_area = models.FloatField(verbose_name='Площадь квартиры')
+  apartment_area = models.DecimalField(max_digits=10, decimal_places=3, verbose_name='Площадь квартиры')
   number_of_residents = models.PositiveIntegerField(verbose_name='Кол-во проживающих человек')
 
   def __str__(self):
@@ -27,6 +27,6 @@ class PersonalAccount(models.Model):
 
 
 class MyUser(AbstractUser):
-    accounts = models.ManyToManyField(PersonalAccount, verbose_name='Лицевые счета')
+    accounts = models.ManyToManyField(PersonalAccount, verbose_name='Лицевые счета', related_name='users')
 
     
