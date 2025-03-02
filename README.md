@@ -12,7 +12,7 @@
 * доступ ко всем данным по лицевым счетам и возможность внесения сведений об оплате услуг, изменения информации о тарифах или пользователях с помощью удобного интерфейса для администраторов сайта
 
 #### Личный кабинет
-<img src="https://github.com/user-attachments/assets/67c5a950-8f11-4366-a99f-1aa967c4a7fd"/>
+<img src="https://github.com/user-attachments/assets/33fde3f7-6ff4-4a0a-b441-859655eabf59"/>
 
 #### Форма отправки показаний
 <img src="https://github.com/user-attachments/assets/b1762447-20b1-43da-9319-f60f8f522a17" width="400"/>
