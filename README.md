@@ -37,15 +37,17 @@ Cоздать и активировать виртуальное окружен�
 * Windows
 ```
 python -m venv venv
-
+```
+```
 source venv/Scripts/activate
 ```
 * Linux 
 ```
 python3 -m venv venv
-
+```
+```
 source venv/bin/activate 
-`````` 
+``` 
 
 Установить зависимости из файла requirements.txt:
 
@@ -56,10 +58,9 @@ pip install -r requirements.txt
 Выполнить миграции:
 
 ```
-python manage.py makemigrations
-
 python manage.py migrate
-
+```
+```
 python manage.py loaddata initial_data.json
 ```
 
@@ -67,4 +68,9 @@ python manage.py loaddata initial_data.json
 
 ```
 python manage.py runserver
+```
+Создать суперпользователя для админки:
+
+```
+python manage.py createsuperuser
 ```
