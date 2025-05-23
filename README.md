@@ -55,7 +55,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Выполнить миграции:
+Выполнить миграции и установить фикстуры:
 
 ```
 python manage.py migrate
