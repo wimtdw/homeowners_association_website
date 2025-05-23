@@ -1,0 +1,363 @@
+[
+  {
+    "model": "users.personalaccount",
+    "pk": 1,
+    "fields": {
+      "account_number": "010010",
+      "building": "1",
+      "apartment_number": "1",
+      "apartment_area": 81.82,
+      "number_of_residents": 3
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 2,
+    "fields": {
+      "account_number": "010020",
+      "building": "1",
+      "apartment_number": "2",
+      "apartment_area": 65.44,
+      "number_of_residents": 2
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 3,
+    "fields": {
+      "account_number": "010030",
+      "building": "1",
+      "apartment_number": "3",
+      "apartment_area": 71.63,
+      "number_of_residents": 2
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 4,
+    "fields": {
+      "account_number": "010040",
+      "building": "1",
+      "apartment_number": "4",
+      "apartment_area": 90.11,
+      "number_of_residents": 4
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 5,
+    "fields": {
+      "account_number": "010050",
+      "building": "1",
+      "apartment_number": "5",
+      "apartment_area": 47.35,
+      "number_of_residents": 1
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 6,
+    "fields": {
+      "account_number": "010060",
+      "building": "1",
+      "apartment_number": "6",
+      "apartment_area": 67.80,
+      "number_of_residents": 2
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 7,
+    "fields": {
+      "account_number": "010070",
+      "building": "1",
+      "apartment_number": "7",
+      "apartment_area": 95.20,
+      "number_of_residents": 4
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 8,
+    "fields": {
+      "account_number": "010080",
+      "building": "1",
+      "apartment_number": "8",
+      "apartment_area": 93.20,
+      "number_of_residents": 5
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 9,
+    "fields": {
+      "account_number": "010090",
+      "building": "1",
+      "apartment_number": "9",
+      "apartment_area": 88.02,
+      "number_of_residents": 3
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 10,
+    "fields": {
+      "account_number": "010100",
+      "building": "1",
+      "apartment_number": "10",
+      "apartment_area": 70.20,
+      "number_of_residents": 2
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 11,
+    "fields": {
+      "account_number": "010110",
+      "building": "1",
+      "apartment_number": "11",
+      "apartment_area": 90.93,
+      "number_of_residents": 4
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 12,
+    "fields": {
+      "account_number": "010120",
+      "building": "1",
+      "apartment_number": "12",
+      "apartment_area": 63.00,
+      "number_of_residents": 1
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 13,
+    "fields": {
+      "account_number": "010130",
+      "building": "1",
+      "apartment_number": "13",
+      "apartment_area": 81.97,
+      "number_of_residents": 4
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 14,
+    "fields": {
+      "account_number": "010140",
+      "building": "1",
+      "apartment_number": "14",
+      "apartment_area": 44.23,
+      "number_of_residents": 1
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 15,
+    "fields": {
+      "account_number": "010150",
+      "building": "1",
+      "apartment_number": "15",
+      "apartment_area": 70.42,
+      "number_of_residents": 2
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 16,
+    "fields": {
+      "account_number": "010160",
+      "building": "1",
+      "apartment_number": "16",
+      "apartment_area": 70.42,
+      "number_of_residents": 3
+    }
+  },
+  {
+    "model": "users.personalaccount",
+    "pk": 17,
+    "fields": {
+      "account_number": "010170",
+      "building": "1",
+      "apartment_number": "17",
+      "apartment_area": 81.97,
+      "number_of_residents": 4
+    }
+  },
+  {
+    "model": "building_service.meters",
+    "pk": 1,
+    "fields": {
+      "individual_number": "12345678",
+      "account": 1,
+      "utility": 1
+    }
+  },
+  {
+    "model": "building_service.meters",
+    "pk": 2,
+    "fields": {
+      "individual_number": "22345678",
+      "account": 1,
+      "utility": 2
+    }
+  },
+  {
+    "model": "building_service.meters",
+    "pk": 3,
+    "fields": {
+      "individual_number": "32345678",
+      "account": 1,
+      "utility": 4
+    }
+  },
+  {
+    "model": "building_service.meters",
+    "pk": 4,
+    "fields": {
+      "individual_number": "42345678",
+      "account": 2,
+      "utility": 1
+    }
+  },
+  {
+    "model": "building_service.meters",
+    "pk": 5,
+    "fields": {
+      "individual_number": "52345678",
+      "account": 2,
+      "utility": 2
+    }
+  },
+  {
+    "model": "building_service.meters",
+    "pk": 6,
+    "fields": {
+      "individual_number": "62345678",
+      "account": 2,
+      "utility": 4
+    }
+  },
+  {
+    "model": "building_service.paymentrecords",
+    "pk": 1,
+    "fields": {
+      "amount_paid": 123.32,
+      "payment_date": "2024-11-25",
+      "account": 1,
+      "utility": 4
+    }
+  },
+  {
+    "model": "building_service.paymentrecords",
+    "pk": 2,
+    "fields": {
+      "amount_paid": 123.00,
+      "payment_date": "2024-11-26",
+      "account": 1,
+      "utility": 4
+    }
+  },
+  {
+    "model": "building_service.paymentrecords",
+    "pk": 3,
+    "fields": {
+      "amount_paid": 321.52,
+      "payment_date": "2024-11-25",
+      "account": 2,
+      "utility": 4
+    }
+  },
+  {
+    "model": "building_service.paymentrecords",
+    "pk": 4,
+    "fields": {
+      "amount_paid": 256.11,
+      "payment_date": "2024-11-25",
+      "account": 1,
+      "utility": 1
+    }
+  },
+  {
+    "model": "building_service.utilities",
+    "pk": 6,
+    "fields": {
+      "name": "Обращение с ТКО",
+      "tariff": 121.18,
+      "units": "с человека",
+      "norm": null
+    }
+  },
+  {
+    "model": "building_service.utilities",
+    "pk": 1,
+    "fields": {
+      "name": "ХВС",
+      "tariff": 59.80,
+      "units": "м³",
+      "norm": 6.935
+    }
+  },
+  {
+    "model": "building_service.utilities",
+    "pk": 2,
+    "fields": {
+      "name": "ГВС",
+      "tariff": 272.14,
+      "units": "м³",
+      "norm": 4.750
+    }
+  },
+  {
+    "model": "building_service.utilities",
+    "pk": 4,
+    "fields": {
+      "name": "Электроснабжение",
+      "tariff": 6.99,
+      "units": "кВт ч",
+      "norm": 70.000
+    }
+  },
+  {
+    "model": "building_service.utilities",
+    "pk": 3,
+    "fields": {
+      "name": "Водоотведение",
+      "tariff": 45.91,
+      "units": "м³",
+      "norm": 11.680
+    }
+  },
+  {
+    "model": "building_service.utilities",
+    "pk": 8,
+    "fields": {
+      "name": "Отопление",
+      "tariff": 2569.16,
+      "units": "Гкал",
+      "norm": 0.016
+    }
+  },
+  {
+    "model": "building_service.utilities",
+    "pk": 5,
+    "fields": {
+      "name": "Сод. жилья",
+      "tariff": 31.68,
+      "units": "м²",
+      "norm": null
+    }
+  },
+  {
+    "model": "building_service.utilities",
+    "pk": 7,
+    "fields": {
+      "name": "Взнос на капремонт",
+      "tariff": 25.58,
+      "units": "м²",
+      "norm": null
+    }
+  }
+]
