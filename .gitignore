@@ -167,11 +167,5 @@ Dockerfile
 docker-compose.yml
 .dockerignore
 
-./migrations/*
-
 db.sqlite3
 *.db
-
-**/migrations/**
-!**/migrations
-!**/migrations/__init__.py

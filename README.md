@@ -19,3 +19,52 @@
 
 #### Сгенерированная квитанция
 <img src="https://github.com/user-attachments/assets/312f92df-77e8-41cd-896f-4860048e8b19" />
+
+### Как запустить проект:
+
+Клонировать репозиторий и перейти в него в командной строке:
+
+```
+git clone https://github.com/wimtdw/homeowners_association_website.git
+```
+
+```
+cd homeowners_association_website/homeowners_website
+```
+
+Cоздать и активировать виртуальное окружение:
+
+* Windows
+```
+python -m venv venv
+
+source venv/Scripts/activate
+```
+* Linux 
+```
+python3 -m venv venv
+
+source venv/bin/activate 
+`````` 
+
+Установить зависимости из файла requirements.txt:
+
+```
+pip install -r requirements.txt
+```
+
+Выполнить миграции:
+
+```
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py loaddata initial_data.json
+```
+
+Запустить проект:
+
+```
+python manage.py runserver
+```
